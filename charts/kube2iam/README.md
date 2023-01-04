@@ -1,7 +1,7 @@
 
 # kube2iam
 
-Installs [kube2iam](https://github.com/jtblin/kube2iam) to provide IAM credentials to pods based on annotations.
+Installs [kube2iam](https://github.com/sriddell/kube2iam) to provide IAM credentials to pods based on annotations.
 
 ## TL;DR;
 
@@ -11,7 +11,7 @@ $ helm install kube2iam/kube2iam
 
 ## Introduction
 
-This chart bootstraps a [kube2iam](https://github.com/jtblin/kube2iam) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+This chart bootstraps a [kube2iam](https://github.com/sriddell/kube2iam) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Prerequisites
   - Kubernetes 1.4+ with Beta APIs enabled
@@ -21,7 +21,7 @@ This chart bootstraps a [kube2iam](https://github.com/jtblin/kube2iam) deploymen
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm repo add kube2iam https://jtblin.github.io/kube2iam/
+$ helm repo add kube2iam https://sriddell.github.io/kube2iam/
 $ helm install kube2iam/kube2iam --name my-release
 ```
 
@@ -50,7 +50,7 @@ Parameter | Description | Default
 `host.iptables` | Add iptables rule | `false`
 `host.interface` | Host interface for proxying AWS metadata | `docker0`
 `host.port` | Port to listen on | `8181`
-`image.repository` | Image | `jtblin/kube2iam`
+`image.repository` | Image | `sriddell/kube2iam`
 `image.tag` | Image tag | `0.10.7`
 `image.pullPolicy` | Image pull policy | `IfNotPresent`
 `image.pullSecrets` | Image pull secrets | `[]`

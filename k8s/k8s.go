@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jtblin/kube2iam"
-	"github.com/jtblin/kube2iam/metrics"
+	"github.com/sriddell/kube2iam"
+	"github.com/sriddell/kube2iam/metrics"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	selector "k8s.io/apimachinery/pkg/fields"

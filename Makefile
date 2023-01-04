@@ -1,4 +1,4 @@
-ORG_PATH="github.com/jtblin"
+ORG_PATH="github.com/sriddell"
 BINARY_NAME := kube2iam
 REPO_PATH="$(ORG_PATH)/$(BINARY_NAME)"
 VERSION_VAR := $(REPO_PATH)/version.Version
@@ -9,7 +9,7 @@ BUILD_DATE := $$(date +%Y-%m-%d-%H:%M)
 GIT_HASH := $$(git rev-parse --short HEAD)
 GOBUILD_VERSION_ARGS := -ldflags "-s -X $(VERSION_VAR)=$(REPO_VERSION) -X $(GIT_VAR)=$(GIT_HASH) -X $(BUILD_DATE_VAR)=$(BUILD_DATE)"
 # useful for other docker repos
-DOCKER_REPO ?= jtblin
+DOCKER_REPO ?= sriddell
 CPU_ARCH ?= amd64
 IMAGE_NAME := $(DOCKER_REPO)/$(BINARY_NAME)-$(CPU_ARCH)
 MANIFEST_NAME := $(DOCKER_REPO)/$(BINARY_NAME)
@@ -27,10 +27,10 @@ setup:
 	go install github.com/mattn/goveralls@latest
 
 build: *.go fmt
-	go build -o build/bin/$(ARCH)/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) github.com/jtblin/$(BINARY_NAME)/cmd
+	go build -o build/bin/$(ARCH)/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) github.com/sriddell/$(BINARY_NAME)/cmd
 
 build-race: *.go fmt
-	go build -race -o build/bin/$(ARCH)/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) github.com/jtblin/$(BINARY_NAME)/cmd
+	go build -race -o build/bin/$(ARCH)/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) github.com/sriddell/$(BINARY_NAME)/cmd
 
 build-all:
 	go build ./...

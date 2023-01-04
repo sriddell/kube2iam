@@ -95,7 +95,7 @@ spec:
     spec:
       hostNetwork: true
       containers:
-        - image: jtblin/kube2iam:latest
+        - image: sriddell/kube2iam:latest
           name: kube2iam
           args:
             - "--base-role-arn=arn:aws:iam::123456789012:role/"
@@ -164,7 +164,7 @@ spec:
     spec:
       hostNetwork: true
       containers:
-        - image: jtblin/kube2iam:latest
+        - image: sriddell/kube2iam:latest
           name: kube2iam
           args:
             - "--base-role-arn=arn:aws:iam::123456789012:role/"
@@ -383,7 +383,7 @@ spec:
       serviceAccountName: kube2iam
       hostNetwork: true
       containers:
-        - image: jtblin/kube2iam:latest
+        - image: sriddell/kube2iam:latest
           imagePullPolicy: Always
           name: kube2iam
           args:
@@ -480,7 +480,7 @@ spec:
       nodeSelector:
         role: app
       containers:
-        - image: docker.io/jtblin/kube2iam:latest
+        - image: docker.io/sriddell/kube2iam:latest
           imagePullPolicy: Always
           name: kube2iam
           args:
@@ -564,7 +564,7 @@ spec:
       nodeSelector:
         node-role.kubernetes.io/worker: ''
       containers:
-        - image: docker.io/jtblin/kube2iam:latest
+        - image: docker.io/sriddell/kube2iam:latest
           imagePullPolicy: Always
           name: kube2iam
           args:
@@ -726,7 +726,7 @@ Usage of kube2iam:
 
 # Author
 
-Jerome Touffe-Blin, [@jtblin](https://twitter.com/jtblin), [About me](http://about.me/jtblin)
+Jerome Touffe-Blin, [@sriddell](https://twitter.com/sriddell), [About me](http://about.me/sriddell)
 
 # License
 

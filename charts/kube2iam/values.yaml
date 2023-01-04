@@ -36,7 +36,7 @@ prometheus:
     labels: {}
 
 image:
-  repository: jtblin/kube2iam
+  repository: sriddell/kube2iam
   tag: 0.10.11
   pullPolicy: IfNotPresent
   ## Optionally specify an array of imagePullSecrets.
