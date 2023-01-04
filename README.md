@@ -1,3 +1,9 @@
+# attribution
+
+Forked from jtblin/kube2iam in order to update os-package dependencies to remove vulnerabilities.
+
+Built from the tip of the master branch.  Uses the same travis-ci build process as the original project.
+
 # kube2iam
 
 Provide IAM credentials to containers running inside a kubernetes cluster based on annotations.
